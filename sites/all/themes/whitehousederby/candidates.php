@@ -16,13 +16,13 @@ $candidates = array(
 		'id' => null,
 		'fullname' => 'Ted Cruz',
 		'horse' => 'horse_3',
-		'image' => 'jebbush'
+		'image' => 'tedcruz'
 	),
 	'jindal' => array(
 		'id' => null,
 		'fullname' => 'Bobby Jindal',
 		'horse' => 'horse_4',
-		'image' => 'jebbush'
+		'image' => 'bobbyjindal'
 	),
 	'paul' => array(
 		'id' => null,
@@ -52,7 +52,7 @@ $candidates = array(
 		'id' => null,
 		'fullname' => 'Scott Walker',
 		'horse' => 'horse_9',
-		'image' => 'jebbush'
+		'image' => 'scottwalker'
 	),
 	'huckabee' => array(
 		'id' => null,
@@ -65,7 +65,7 @@ $candidates = array(
 		'id' => null,
 		'fullname' => 'Judge Napolitano',
 		'horse' => 'horse_11',
-		'image' => 'jebbush'	
+		'image' => 'thejudge'	
 	),
 	'west' => array(
 		'id' => null,

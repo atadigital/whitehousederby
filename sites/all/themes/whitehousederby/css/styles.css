@@ -49,6 +49,8 @@ table {
 
 /* Styles */
 
+/* Races Page */
+
 body {
 	font-size: 1em;
 }
@@ -100,3 +102,150 @@ body {
     min-height: 10px !important;
     background: #c69c6d;
 }
+
+/* Form Page */
+
+#wrapper {
+	width: 970px;
+	min-height: 1024px;
+	margin: 0 auto;
+	padding-bottom: 150px;
+	overflow: hidden;
+	background: url(../images/form/footer-image.jpg) no-repeat bottom center;
+}
+
+#wrapper > div.region.region-content {
+	margin: 35px 40px 0;
+}
+
+#header {
+	width: 100%;
+}
+
+#header img {
+	display: block;
+	margin: 0 auto;
+}
+
+#node-1 > div.content {
+	background: #e6e4dc;
+	border-radius: 20px;
+	border: 3px solid #dedad0;
+	padding: 20px;
+}
+
+#node-1 > div.submitted {
+	display: none;
+}
+
+#node-1 > div.content > div {
+	display: none;
+}
+
+#edit-submitted-candidate > div.form-item-submitted-candidate {
+	float: left;
+	height: 180px;
+	width: 100px;
+	overflow: hidden;
+	margin-right: 5px;
+}
+
+#webform-component-first-name {
+	clear: both;
+}
+
+#webform-component-candidate .form-item input[type="radio"] {
+	position: absolute;
+	left: -9999px;
+}
+
+.compact-form-wrapper {
+	position: relative;
+}
+
+.compact-form-label {
+	position: absolute;
+	top: 13px;
+	left: 15px;
+	color: #fff;
+	font-family: "Arial", sans-serif;
+}
+
+.form-item, .form-actions {
+	margin: 0;
+}
+
+input[type="text"], input[type="email"] {
+	border: 0;
+	width: 185px;
+	height: 40px;
+	padding-left: 15px;
+	background: #aeada8;
+	color: #fff;
+	-webkit-appearance: none;
+    border-radius: 0;
+}
+
+.form-item input.error {
+	width: 181px;
+	height: 36px;
+}
+
+#webform-component-form-wrap {
+	overflow: hidden;
+	position: relative;
+	width: 800px;
+	padding-right: 100px;
+	margin: 0 auto;
+}
+
+#webform-component-form-wrap .webform-component {
+	float: left;
+	color: #101f52;
+	margin-right: 10px;
+}
+
+#webform-component-form-wrap--first-name,
+#webform-component-form-wrap--last-name {
+	margin-bottom: 10px;
+}
+
+#webform-component-form-wrap--cast-your-vote {
+	font-size: 35px;
+	height: 95px;
+	line-height: 95px;
+	margin-right: 20px !important;
+}
+
+#edit-actions {
+	position: relative;
+	top: -100px;
+	left: 680px;
+}
+
+#edit-submit {
+	display: block;
+	width: 170px;
+	height: 100px;
+	padding: 0 35px;
+	border: 0;
+	background: #88302d;
+	-webkit-appearance: none;
+	border-radius: 0;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	word-wrap: break-word;
+}
+
+.active {
+	/* border: 1px solid red; */
+	background: rgba(0,0,0,0.5);
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+ 	#wrapper {
+ 		padding-bottom: 475px;
+ 	}
+}
+

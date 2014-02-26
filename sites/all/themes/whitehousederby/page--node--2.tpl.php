@@ -15,9 +15,9 @@ $candidateVotes = 20;
 foreach($candidates as $candidate => $candidateData) {
 	
 	
-	$voteCount = db_query("SELECT * FROM {webform_submitted_data} WHERE data = 'bush'");
+	//$voteCount = db_query("SELECT * FROM {webform_submitted_data} WHERE data = 'bush'");
 	
-	$number_of_rows = $voteCount->rowCount();
+	//$number_of_rows = $voteCount->rowCount();
 	
 	print($number_of_rows);
 
@@ -27,7 +27,7 @@ foreach($candidates as $candidate => $candidateData) {
 	print "<div class='finish'><img src='" . $base_path . "sites/all/themes/whitehousederby/images/whitehouse.jpg' /></div></div><div class='spacer'></div>";
 
 	//Limit to 10 showing
-	if($i++ == 9) { break; }
+	//if($i++ == 9) { break; }
 }
 ?>
 
