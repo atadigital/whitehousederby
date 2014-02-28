@@ -84,7 +84,10 @@ body {
 .candidate img,
 .fullname {
 	float: left;
-	
+}
+
+.candidate img {
+	border-right: 3px solid #60713c;
 }
 
 .fullname {

@@ -18,13 +18,14 @@ function resizeAssets() {
     $this.children(".horseArea").width(Math.floor($winWidth-($laneHeight*4)));
     $this.children(".finish").width(Math.floor($laneHeight*2));
     $this.children().find("img, .colorbar").height($laneHeight);
-    $this.children(".candidate").find("img, .fullname").height($laneHeight).width(Math.floor($laneHeight));
+    $this.children(".candidate").find("img").height($laneHeight).width(Math.floor($laneHeight-4));
+    $this.children(".candidate").find(".fullname").height($laneHeight).width(Math.floor($laneHeight));
 }
 
 function horsePosition() {
 
     //Total Votes to Win
-    $totalVotes = 100;
+    $totalVotes = 10;
 
     $winWidth = $(window).width();
     $winHeight = $(window).height();
@@ -122,7 +123,7 @@ for (var i = 1; i < 16 ; i++) {
 	      break;
 	}
 	
-		$("body.page-node-1 #edit-submitted-candidate > div:nth-child(" + i + ") > label").html("<div class='imagewrap'><img src='http://localhost/whitehousederby/sites/all/themes/whitehousederby/images/form/candidates/" + picName + ".png' /></div>");
+		$("body.page-node-1 #edit-submitted-candidate > div:nth-child(" + i + ") > label").html("<div class='imagewrap'><img src='http://cpac.convertresponse.com/sites/all/themes/whitehousederby/images/form/candidates/" + picName + ".png' /></div>");
 	
 	$("#edit-submitted-candidate .form-item > label").click(function(){
 	

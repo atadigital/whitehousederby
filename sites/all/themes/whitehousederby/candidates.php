@@ -92,4 +92,9 @@ $candidates = array(
 		'image' => 'sarahpalin'
 	),
 );
+
+
+
+
+
 ?>
