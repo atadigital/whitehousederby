@@ -61,6 +61,7 @@ $candidates = array(
 		'image' => 'mikehuckabee'
 		
 	),
+	/*
 	'napolitano' => array(
 		'id' => null,
 		'fullname' => 'Judge Napolitano',
@@ -72,6 +73,19 @@ $candidates = array(
 		'fullname' => 'Allen West',
 		'horse' => 'horse_12',
 		'image' => 'allenwest'
+	),
+	*/
+	'pence' => array(
+		'id' => null,
+		'fullname' => 'Mike Pence',
+		'horse' => 'horse_11',
+		'image' => 'mikepence'
+	),
+	'rubio' => array(
+		'id' => null,
+		'fullname' => 'Marco Rubio',
+		'horse' => 'horse_12',
+		'image' => 'marcorubio'
 	),
 	'demint' => array(
 		'id' => null,
@@ -91,6 +105,12 @@ $candidates = array(
 		'horse' => 'horse_15',
 		'image' => 'sarahpalin'
 	),
+	'christie' => array(
+		'id' => null,
+		'fullname' => 'Chris Christie',
+		'horse' => 'horse_15',
+		'image' => 'christie'
+	)
 );
 
 

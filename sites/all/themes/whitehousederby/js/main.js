@@ -16,7 +16,7 @@ function resizeAssets() {
 
     $this.children(".candidate").width(Math.floor($laneHeight*2));
     $this.children(".horseArea").width(Math.floor($winWidth-($laneHeight*4)));
-    $this.children(".finish").width(Math.floor($laneHeight*2));
+    $this.children(".finish").height($laneHeight).width(Math.floor($laneHeight*2));
     $this.children().find("img, .colorbar").height($laneHeight);
     $this.children(".candidate").find("img").height($laneHeight).width(Math.floor($laneHeight-4));
     $this.children(".candidate").find(".fullname").height($laneHeight).width(Math.floor($laneHeight));
@@ -38,101 +38,118 @@ function horsePosition() {
         //Get number of votes per horse
         $multiplier = $(this).data("position");
 
-        $spot = ($multiplier/$totalVotes)*$horseArea;
+        $spot = ($multiplier/50)*$horseArea;
 
 
         $(this).prev().animate({width: $spot},"slow");
 
     });
 }
-
-horsePosition();
-resizeAssets();
-    
-	$(window).resize(function(){
-			 resizeAssets();
-	});
 	    
+function formLayout() {
 
-
-/* Straw Poll Form */
-for (var i = 1; i < 16 ; i++) {
-	
-	var picName;
-
-	 switch(i){
-	      case 1:
-	      	picName = "bush";
-	      	picTitle = "Jeb Bush";
-	      break;
-	      case 2:
-	      	picName = "carson";
-	      	picTitle = "Ben Carson";
-	      break;
-	      case 3:
-	      	picName = "cruz";
-	      	picTitle = "Ted Cruz";
-	      break;
-	      case 4:
-	      	picName = "jindal";
-	      	picTitle = "Bobby Jindal";
-	      break;
-	      case 5:
-	      	picName = "paul";
-	      	picTitle = "Rand Paul";
-	      break;
-	      case 6:
-	      	picName = "perry";
-	      	picTitle = "Rick Perry";
-	      break;
-	      case 7:
-	      	picName = "ryan";
-	      	picTitle = "Paul Ryan";
-	      break;
-	      case 8:
-	      	picName = "santorum";
-	      	picTitle = "Rick Santorum";
-	      break;
-	      case 9:
-	      	picName = "walker";
-	      	picTitle = "Scott Walker";
-	      break;
-	      case 10:
-	      	picName = "huckabee";
-	      	picTitle = "Mike Huckabee";
-	      break;
-	      case 11:
-	      	picName = "napolitano";
-	      	picTitle = "Judge Napolitano";
-	      break;
-	      case 12:
-	      	picName = "west";
-	      	picTitle = "Allen West";
-	      break;
-	      case 13:
-	      	picName = "demint";
-	      	picTitle = "Jim DeMint";
-	      break;
-	      case 14:
-	      	picName = "lee";
-	      	picTitle = "Mike Lee";
-	      break;
-	      case 15:
-	      	picName = "palin";
-	      	picTitle = "Sarah Palin";
-	      break;
-	}
-	
-		$("body.page-node-1 #edit-submitted-candidate > div:nth-child(" + i + ") > label").html("<div class='imagewrap'><img src='http://cpac.convertresponse.com/sites/all/themes/whitehousederby/images/form/candidates/" + picName + ".png' /></div>");
-	
-	$("#edit-submitted-candidate .form-item > label").click(function(){
-	
-		$("#edit-submitted-candidate .form-item > label .imagewrap").removeClass("active");
+	/* Straw Poll Form */
+	for (var i = 1; i < 17 ; i++) {
 		
-		$(this).find(".imagewrap").addClass("active");
+		var picName;
+	
+		 switch(i){
+		      case 1:
+		      	picName = "bush";
+		      	picTitle = "Jeb Bush";
+		      break;
+		      case 2:
+		      	picName = "carson";
+		      	picTitle = "Ben Carson";
+		      break;
+		      case 3:
+		      	picName = "cruz";
+		      	picTitle = "Ted Cruz";
+		      break;
+		      case 4:
+		      	picName = "jindal";
+		      	picTitle = "Bobby Jindal";
+		      break;
+		      case 5:
+		      	picName = "paul";
+		      	picTitle = "Rand Paul";
+		      break;
+		      case 6:
+		      	picName = "perry";
+		      	picTitle = "Rick Perry";
+		      break;
+		      case 7:
+		      	picName = "ryan";
+		      	picTitle = "Paul Ryan";
+		      break;
+		      case 8:
+		      	picName = "santorum";
+		      	picTitle = "Rick Santorum";
+		      break;
+		      case 9:
+		      	picName = "walker";
+		      	picTitle = "Scott Walker";
+		      break;
+		      case 10:
+		      	picName = "huckabee";
+		      	picTitle = "Mike Huckabee";
+		      break;
+		      /*
+case 11:
+		      	picName = "napolitano";
+		      	picTitle = "Judge Napolitano";
+		      break;
+		      case 12:
+		      	picName = "west";
+		      	picTitle = "Allen West";
+		      break;
+*/
+		      case 11:
+		      	picName = "pence";
+		      	picTitle = "Mike Pence";
+		      break;
+		      case 12:
+		      	picName = "rubio";
+		      	picTitle = "Marco Rubio";
+		      break;
+		      case 13:
+		      	picName = "demint";
+		      	picTitle = "Jim DeMint";
+		      break;
+		      case 14:
+		      	picName = "lee";
+		      	picTitle = "Mike Lee";
+		      break;
+		      case 15:
+		      	picName = "palin";
+		      	picTitle = "Sarah Palin";
+		      break;
+		      case 16:
+		      	picName = "christie";
+		      	picTitle = "Chris Christie";
+		      break;
+		}
+		
+			$("body.page-node-1 #edit-submitted-candidate > div:nth-child(" + i + ") > label").html("<div class='imagewrap'><img src='sites/all/themes/whitehousederby/images/form/candidates/" + picName + ".png' /></div>");
+		
+		$("#edit-submitted-candidate .form-item > label").click(function(){
+		
+			$("#edit-submitted-candidate .form-item > label .imagewrap").removeClass("active");
 			
-	});
+			$(this).find(".imagewrap").addClass("active");
+				
+		});
+	}
 		
 }
+
+formLayout();
+resizeAssets();
+horsePosition();
+    
+$(window).resize(function(){
+	resizeAssets();
+});
+
 
 });

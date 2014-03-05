@@ -48,6 +48,7 @@
 
 <head profile="<?php print $grddl_profile; ?>">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="<?php print base_path(); ?>sites/all/themes/whitehousederby/images/apple_icon.jpg">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>

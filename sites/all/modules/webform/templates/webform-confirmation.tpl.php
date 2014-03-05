@@ -15,7 +15,22 @@
  * - $sid: The unique submission ID of this submission.
  */
 ?>
-
+<script>
+jQuery(document).ready(function($){
+  var delay = 5 ;
+  var url = "http://localhost/whitehousederby";
+  function countdown() {
+  setTimeout(countdown, 1000) ;
+  $('.links').html("Redirecting in "  + delay  + " seconds.");
+  delay --;
+  if (delay < 0 ) {
+  window.location = url ;
+  delay = 0 ;
+  }
+ }
+countdown() ;
+});
+</script>
 <div class="webform-confirmation">
   <?php if ($confirmation_message): ?>
     <?php print $confirmation_message ?>
